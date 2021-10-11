@@ -1,0 +1,21 @@
+#idea
+.idea/
+/idea/
+*.ipr
+*.iml
+*.iws
+.vscode/
+
+#temp file
+logs/
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Strore
+Thnmbs.db
+
+node_modules/
