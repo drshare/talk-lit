@@ -42,4 +42,9 @@ button:hover {
     border-color: #ffffff;
     color: green;
 }
-
+footer {
+    color: #fff;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+}
