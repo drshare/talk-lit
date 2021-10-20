@@ -1,16 +1,15 @@
 // app.js
+const SERVER_PORT = 9528;
+const SOCKET_PORT = 9527;
 const express = require('express');
 const app = express();
 const path = require('path');
 const server = require('http').createServer(app);
 app.use(express.static(path.join(__dirname, './', 'public')));
 
-const PORT = 9528;
-server.listen(PORT, () => console.log(`Server is listening on ${PORT}`));
-
+server.listen(SERVER_PORT, () => console.log(`Server is listening on ${SERVER_PORT}`));
 // socket
 const ws = require('nodejs-websocket');
-const SOCKET_SERVER_PORT = 9527;
 
 const socketServer = ws.createServer(connect => {
     console.log(`用户连接成功！`);
@@ -27,8 +26,8 @@ const socketServer = ws.createServer(connect => {
         console.log('用户连接异常');
     });
 })
-socketServer.listen(SOCKET_SERVER_PORT, () => {
-    console.log(`socket 服务启动监听端口${SOCKET_SERVER_PORT}`);
+socketServer.listen(SOCKET_PORT, () => {
+    console.log(`socket 服务启动监听端口${SOCKET_PORT}`);
 });
 
 //广播

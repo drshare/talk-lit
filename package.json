@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "node app.js",
+    "dev": "cross-env NODE_ENV=developement nodemon app.mjs",
     "start": "pm2 start ecosystem.config.js",
     "restart": "pm2 restart ecosystem.config.js",
     "stop": "pm2 delete all",
@@ -14,7 +14,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "nodejs-websocket": "^1.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
   }
 }
