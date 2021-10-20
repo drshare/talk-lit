@@ -4,7 +4,7 @@ window.onload = function () {
     const btn = document.getElementById('btn')
 
     // 创建WebSocket 连接
-    const SOCKET_URL = `ws://${location.hostname}:9527`;
+    const SOCKET_URL = `ws://hjyspace.xyz/socket`;
     const socket = new WebSocket(SOCKET_URL);
     socket.addEventListener('open', () => {
         addMessage('连接成功！');
